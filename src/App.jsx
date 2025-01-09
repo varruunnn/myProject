@@ -109,6 +109,13 @@ const Portfolio = () => {
       demoLink: "https://private-user-images.githubusercontent.com/143994029/384676413-0fc14560-7dbe-416e-b7e8-2dd09665d8cf.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzUzODIzMTQsIm5iZiI6MTczNTM4MjAxNCwicGF0aCI6Ii8xNDM5OTQwMjkvMzg0Njc2NDEzLTBmYzE0NTYwLTdkYmUtNDE2ZS1iN2U4LTJkZDA5NjY1ZDhjZi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIyOFQxMDMzMzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OTdjYWE1ODI4NzIzYzMwMmE2OGIxNWZmN2YxMWVmMGU4YWRlNzk0MjYzNWYwNzFiODU4MjcyOGU5MWEwNmVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.hSz7bKDWSGq0_4d4cezediO9puQpT7d0VgJBI3yEw2o",
       githubLink: "https://github.com/varruunnn/videoPlayer",
     },
+    {
+      "name": "Dynamic-Event-Calendar-Application",
+      "description": "A dynamic and interactive calendar app that allows users to add, edit, and manage events. The app includes features like event filtering, event export (JSON and CSV formats), and the ability to drag-and-drop events across different dates with time conflict checks.\nAdd Events: Easily add events to specific dates, with customizable name, description, start time, end time, and category.\nDrag-and-Drop Events: Move events across different days and times with automatic conflict checks.\nEvent Filtering: Filter events by name or description with a search bar to quickly find relevant events.\nEvent Management: Edit event details, delete events, or add them back to any selected day.\nExport Events: Export the current month's events in either JSON or CSV format for easy data sharing.\nResponsive Design: Works seamlessly across devices with a mobile-friendly interface.",
+      "demoLink": "https://dynamic-event-calendar-application-psi.vercel.app/",
+      "githubLink": "https://github.com/varruunnn/Dynamic-Event-Calendar-Application.git"
+    }
+    
   ];
 
   useEffect(() => {
@@ -263,7 +270,7 @@ const Portfolio = () => {
               >
                 Skills
               </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-20">
+              <div  className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-20">
                 {skills.map((category, index) => (
                   <motion.div
                     key={index}
