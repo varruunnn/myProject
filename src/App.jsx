@@ -92,13 +92,23 @@ const Portfolio = () => {
       name: "BigGameWars",
       description: "Developed a full-stack web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) to facilitate team-based competitions for popular games like Valorant and BGMII.Implemented JWT-based authentication for secure login and signup functionality.Built features for user profile management, allowing users to update their usernames and contact the admin team directly.Purchased and deployed the application on a custom domain using GoDaddy, ensuring a professional and reliable web presence.Estimated to onboard 1,000+ active users within the first phase of its full launch, showcasing the platforms scalability and appeal to the gaming community.",
       technologies: ["React", "Node.js", "TailwindCSS"],
+      img:"/biggamewars.png",
       demoLink: "https://www.biggamewars.com/",
       githubLink: "https://github.com/varruunnn/GamingArena",
+    },
+    {
+      name: "RealTimeEditor",
+      description: "A modern real-time platform tailored for frontend developers and interviewers. This tool enables seamless collaboration by providing features to upload designs, live code with peers, and even annotate designs in real-time.Room Creation & Joining: Create or join rooms to collaborate in real-time.Live Code Editor: Write HTML, CSS, and JS using a powerful CodeMirror-based editor.Live Preview: Instantly preview your code changes in a live-rendered iframe.Image Upload: Upload Figma files or other design mockups to collaborate visually.Real-Time Annotations: Annotate designs using a pencil tool or eraser for live feedback.Socket.IO Integration: Ensures all changes, including code, annotations, and image uploads, are synchronized in real-time.",
+      technologies: ["React", "Node.js", "Socket", "TailwindCSS"],
+      img:"/realtime.png",
+      demoLink: "real-time-editor-gilt.vercel.app",
+      githubLink: "https://github.com/varruunnn/RealTimeEditor.git",
     },
     {
       name: "Weather App",
       description: "Designed and developed a real-time weather web application using React and integrated with OpenWeatherMap API.Utilized a reliable weather API to provide accurate, up-to-date weather information for any location.Implemented user-friendly features, including search functionality and responsive design for seamless access across devices.Optimized API integration by allowing users to generate and use their own API key for personalized weather data.",
       technologies: ["React", "Next.js", "ChakraUI"],
+      img:"/weather.png",
       demoLink: "https://weather-app-tau-olive-72.vercel.app/",
       githubLink: "https://github.com/varruunnn/WeatherApp",
     },
@@ -106,16 +116,17 @@ const Portfolio = () => {
       name: "VideoPlayer",
       description: "Developed a video player web application using React for the frontend and MongoDB for video metadata storage.Implemented seamless video upload and playback functionality, enabling users to watch videos directly in the browser without additional software.Ensured persistent video availability by securely storing video metadata in MongoDB, allowing access even after page reloads.Optimized for user convenience with a fully browser-based solution, eliminating the need for app installation.",
       technologies: ["Vue.js", "Express", "CSS"],
-      demoLink: "https://private-user-images.githubusercontent.com/143994029/384676413-0fc14560-7dbe-416e-b7e8-2dd09665d8cf.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzUzODIzMTQsIm5iZiI6MTczNTM4MjAxNCwicGF0aCI6Ii8xNDM5OTQwMjkvMzg0Njc2NDEzLTBmYzE0NTYwLTdkYmUtNDE2ZS1iN2U4LTJkZDA5NjY1ZDhjZi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIyOFQxMDMzMzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OTdjYWE1ODI4NzIzYzMwMmE2OGIxNWZmN2YxMWVmMGU4YWRlNzk0MjYzNWYwNzFiODU4MjcyOGU5MWEwNmVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.hSz7bKDWSGq0_4d4cezediO9puQpT7d0VgJBI3yEw2o",
+      img:"/videoplay.png",
+      demoLink: "https://github-production-user-asset-6210df.s3.amazonaws.com/143994029/384676413-0fc14560-7dbe-416e-b7e8-2dd09665d8cf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250116T134811Z&X-Amz-Expires=300&X-Amz-Signature=9f1ef58990b6da9e0781345c46967c568c6266537aea3d0e1c9350d246fa7943&X-Amz-SignedHeaders=host",
       githubLink: "https://github.com/varruunnn/videoPlayer",
     },
     {
       "name": "Dynamic-Event-Calendar-Application",
       "description": "A dynamic and interactive calendar app that allows users to add, edit, and manage events. The app includes features like event filtering, event export (JSON and CSV formats), and the ability to drag-and-drop events across different dates with time conflict checks.\nAdd Events: Easily add events to specific dates, with customizable name, description, start time, end time, and category.\nDrag-and-Drop Events: Move events across different days and times with automatic conflict checks.\nEvent Filtering: Filter events by name or description with a search bar to quickly find relevant events.\nEvent Management: Edit event details, delete events, or add them back to any selected day.\nExport Events: Export the current month's events in either JSON or CSV format for easy data sharing.\nResponsive Design: Works seamlessly across devices with a mobile-friendly interface.",
+      img:"/calender.png",
       "demoLink": "https://dynamic-event-calendar-application-psi.vercel.app/",
       "githubLink": "https://github.com/varruunnn/Dynamic-Event-Calendar-Application.git"
     }
-    
   ];
 
   useEffect(() => {
@@ -321,6 +332,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative p-8">
                   <h3 className="text-2xl font-bold mb-4">{project.name}</h3>
+                  <img src={project.img} alt="RealTimeEditor" />
                   <p className="text-gray-400 mb-6">{project.description}</p>
                   <div className="flex gap-4">
                     <a
