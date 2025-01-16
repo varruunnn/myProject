@@ -101,7 +101,7 @@ const Portfolio = () => {
       description: "A modern real-time platform tailored for frontend developers and interviewers. This tool enables seamless collaboration by providing features to upload designs, live code with peers, and even annotate designs in real-time.Room Creation & Joining: Create or join rooms to collaborate in real-time.Live Code Editor: Write HTML, CSS, and JS using a powerful CodeMirror-based editor.Live Preview: Instantly preview your code changes in a live-rendered iframe.Image Upload: Upload Figma files or other design mockups to collaborate visually.Real-Time Annotations: Annotate designs using a pencil tool or eraser for live feedback.Socket.IO Integration: Ensures all changes, including code, annotations, and image uploads, are synchronized in real-time.",
       technologies: ["React", "Node.js", "Socket", "TailwindCSS"],
       img:"/realtime.png",
-      demoLink: "real-time-editor-gilt.vercel.app",
+      demoLink: "https://real-time-editor-gilt.vercel.app",
       githubLink: "https://github.com/varruunnn/RealTimeEditor.git",
     },
     {
@@ -117,7 +117,7 @@ const Portfolio = () => {
       description: "Developed a video player web application using React for the frontend and MongoDB for video metadata storage.Implemented seamless video upload and playback functionality, enabling users to watch videos directly in the browser without additional software.Ensured persistent video availability by securely storing video metadata in MongoDB, allowing access even after page reloads.Optimized for user convenience with a fully browser-based solution, eliminating the need for app installation.",
       technologies: ["Vue.js", "Express", "CSS"],
       img:"/videoplay.png",
-      demoLink: "https://github-production-user-asset-6210df.s3.amazonaws.com/143994029/384676413-0fc14560-7dbe-416e-b7e8-2dd09665d8cf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250116T134811Z&X-Amz-Expires=300&X-Amz-Signature=9f1ef58990b6da9e0781345c46967c568c6266537aea3d0e1c9350d246fa7943&X-Amz-SignedHeaders=host",
+      demoLink: "https://github.com/varruunnn/videoPlayer",
       githubLink: "https://github.com/varruunnn/videoPlayer",
     },
     {
