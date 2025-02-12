@@ -33,25 +33,31 @@ const Portfolio = () => {
       items: [
         { name: "React.js", level: 90 },
         { name: "Tailwind CSS", level: 85 },
-        { name: "material ui", level: 88 },
+        { name: "framer motion / shadcn", level: 88 },
       ]
     },
     {
       category: "Backend",
       items: [
         { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "MongoDB", level: 75 },
-        { name: "SQL", level: 78 }
+        { name: "Express", level: 82 },
+        { name: "MongoDB", level: 80 },
       ]
     },
     {
       category: "Tools & Others",
       items: [
-        { name: "Git&Github", level: 88 },
-        { name: "Netlify", level: 75 },
-        { name: "Vercel", level: 70 },
+        { name: "Git&Github", level: 92 },
+        { name: "Render", level: 85 },
+        { name: "Vercel", level: 90 },
         { name: "GoDaddy", level: 72 }
+      ]
+    },    
+    {
+      category: "Currently Learning",
+      items: [
+        { name: "solidity & thirdweb"},
+        { name: "web3"},
       ]
     }
   ];
