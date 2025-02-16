@@ -225,6 +225,16 @@ const Portfolio = () => {
                 <p className="text-gray-400 text-lg md:text-xl max-w-xl mb-8">
                 Aspiring web developer with a strong foundation in MERN currently enhancing skills through hands-on projects. Passionate about creating dynamic and user-friendly web applications, I am eager to contribute to innovative teams. With a keen interest in Web3 technologies.
                 </p>
+                <p className="max-w-xl mb-8">
+                  <a 
+                    href="https://snowcoder.hashnode.dev/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-blue-400 hover:underline text-lg"
+                  >
+                    Check out my Blog on Hashnode
+                  </a>
+                </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
