@@ -582,7 +582,7 @@ const Portfolio = () => {
                     className="group relative px-8 py-4 bg-white text-black rounded-full text-lg font-medium overflow-hidden flex items-center"
                   >
                     <span className="relative z-10 flex items-center gap-2">
-                      ↓ Download CV
+                      ↓ Download resume
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </motion.a>
