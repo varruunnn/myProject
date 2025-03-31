@@ -5,7 +5,6 @@ import { SiMongodb, SiExpress, SiRedux,SiDjango,SiFlask , SiNextdotjs, SiTailwin
 import { CgCPlusPlus } from 'react-icons/cg';
 import {
   GithubIcon,
-  LinkedinIcon,
   MailIcon,
   ExternalLinkIcon,
   TwitterIcon,
@@ -90,12 +89,6 @@ const Portfolio = () => {
       href: "https://x.com/_vaarruunn_",
       type: "link",
       label: "Twitter",
-    },
-    {
-      icon: LinkedinIcon,
-      href: "https://linkedin.com/in/yourprofile",
-      type: "link",
-      label: "LinkedIn",
     },
     {
       icon: MailIcon,
