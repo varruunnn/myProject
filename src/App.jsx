@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,FaPython , FaDatabase, FaGitAlt } from 'react-icons/fa';
+import { SiMongodb, SiExpress, SiRedux,SiDjango,SiFlask , SiNextdotjs, SiTailwindcss, SiFramer, SiSolidity, SiWeb3Dotjs, SiRender, SiVercel, SiGodaddy } from 'react-icons/si';
+import { CgCPlusPlus } from 'react-icons/cg';
 import {
   GithubIcon,
   LinkedinIcon,
@@ -33,46 +36,48 @@ const Portfolio = () => {
     {
       category: "Programming Languages",
       items: [
-        { name: "JavaScript", level: 88 },
-        { name: "HTML5", level: 85 },
-        { name: "CSS", level: 77 },
-        { name: "C++", level: 85 },
+        { name: "JavaScript", icon: <FaJs size={40} color="#F7DF1E" /> },
+        { name: "HTML5", icon: <FaHtml5 size={40} color="#E34F26" /> },
+        { name: "CSS", icon: <FaCss3Alt size={40} color="#1572B6" /> },
+        { name: "C++", icon: <CgCPlusPlus size={40} color="#00599C" /> },
+        { name: "Python", icon: <FaPython  size={40} color="#ffea75" /> },
       ],
     },
     {
       category: "Frontend",
       items: [
-        { name: "React.js", level: 90 },
-        { name: "Tailwind CSS", level: 85 },
-        { name: "Framer Motion", level: 88 },
+        { name: "React.js", icon: <FaReact size={40} color="#61DAFB" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss size={40} color="#06B6D4" /> },
+        { name: "Framer Motion", icon: <SiFramer size={40} color="#0055FF" /> },
       ],
     },
     {
       category: "Backend",
       items: [
-        { name: "Node.js", level: 85 },
-        { name: "Express", level: 82 },
-        { name: "MongoDB", level: 80 },
+        { name: "Node.js", icon: <FaNodeJs size={40} color="#339933" /> },
+        { name: "Express", icon: <SiExpress size={40} color="#FFFFFF" /> },
+        { name: "Django", icon: <SiDjango  size={40} color="#FFFFFF" /> },
+        { name: "Flask", icon: <SiFlask   size={40} color="#dddddd" /> },
+        { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" /> },
       ],
     },
     {
       category: "Tools & Others",
       items: [
-        { name: "Git & GitHub", level: 92 },
-        { name: "Render", level: 85 },
-        { name: "Vercel", level: 90 },
-        { name: "GoDaddy", level: 72 },
+        { name: "Git & GitHub", icon: <FaGitAlt size={40} color="#F05032" /> },
+        { name: "Render", icon: <SiRender size={40} color="#46E3B7" /> },
+        { name: "Vercel", icon: <SiVercel size={40} color="#000000" /> },
+        { name: "GoDaddy", icon: <SiGodaddy size={40} color="#1BDB80" /> },
       ],
     },
     {
       category: "Currently Learning",
       items: [
-        { name: "Solidity & Thirdweb", level: 65 },
-        { name: "Web3", level: 60 },
+        { name: "Solidity & Thirdweb", icon: <SiSolidity size={40} color="#363636" /> },
+        { name: "Web3", icon: <SiWeb3Dotjs size={40} color="#F16822" /> },
       ],
     },
   ];
-
   const contactLinks = [
     {
       icon: GithubIcon,
@@ -197,6 +202,38 @@ const Portfolio = () => {
         "https://github.com/varruunnn/Dynamic-Event-Calendar-Application.git",
     },
   ];
+  // Add this function in your component
+const getIconPath = (skillName) => {
+  const iconMap = {
+    // Programming Languages
+    "JavaScript": "javascript/javascript-original.svg",
+    "HTML5": "html5/html5-original.svg",
+    "CSS": "css3/css3-original.svg",
+    "C++": "cplusplus/cplusplus-original.svg",
+    
+    // Frontend
+    "React.js": "react/react-original.svg",
+    "Tailwind CSS": "tailwindcss/tailwindcss-plain.svg",
+    "Framer Motion": "react/react-original.svg", // Using React icon as placeholder
+    
+    // Backend
+    "Node.js": "nodejs/nodejs-original.svg",
+    "Express": "express/express-original.svg",
+    "MongoDB": "mongodb/mongodb-original.svg",
+    
+    // Tools & Others
+    "Git & GitHub": "git/git-original.svg",
+    "Render": "amazonwebservices/amazonwebservices-original.svg", // Using AWS as placeholder
+    "Vercel": "nextjs/nextjs-original.svg", // Using Next.js as placeholder 
+    "GoDaddy": "digitalocean/digitalocean-original.svg", // Using DO as placeholder
+    
+    // Currently Learning
+    "Solidity & Thirdweb": "ethereum/ethereum-original.svg", // Using Ethereum as placeholder
+    "Web3": "ethereum/ethereum-original.svg", // Using Ethereum as placeholder
+  };
+  
+  return iconMap[skillName] || "react/react-original.svg"; // Default fallback
+};
 
   const navigationItems = [
     { id: "home", icon: UserIcon, label: "Home" },
@@ -713,67 +750,59 @@ const Portfolio = () => {
         </section>
 
         {/* Skills Section */}
-        <section
-          className="py-32 px-4 bg-gradient-to-b from-transparent to-gray-900/50"
-          id="skills"
+<section
+  className="py-32 px-4 bg-gradient-to-b from-transparent to-gray-900/50"
+  id="skills"
+>
+  <div className="max-w-7xl mx-auto">
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-4xl md:text-6xl font-bold mb-16 ml-4 md:ml-20"
+      onMouseEnter={textEnter}
+      onMouseLeave={textLeave}
+    >
+      Skills
+    </motion.h2>
+    
+    <div className="px-4 md:px-20">
+      {skills.map((category, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1 }}
+          className="mb-10"
         >
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-bold mb-16 ml-4 md:ml-20"
-              onMouseEnter={textEnter}
-              onMouseLeave={textLeave}
-            >
-              Skills
-            </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-20">
-              {skills.map((category, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
-                  className="bg-gray-900/50 rounded-xl p-8 backdrop-blur-sm border border-gray-800 hover:border-blue-500/50 transition-colors"
-                >
-                  <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    {category.category}
-                  </h3>
-                  <div className="space-y-6">
-                    {category.items.map((skill, skillIndex) => (
-                      <div key={skillIndex}>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-gray-300">{skill.name}</span>
-                          {skill.level && (
-                            <span className="text-blue-400">
-                              {skill.level}%
-                            </span>
-                          )}
-                        </div>
-                        {skill.level && (
-                          <div className="relative h-2 bg-gray-700 rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              viewport={{ once: true }}
-                              transition={{
-                                duration: 1,
-                                delay: skillIndex * 0.1,
-                              }}
-                              className="absolute h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
-                            />
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            {category.category}
+          </h3>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {category.items.map((skill, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ 
+                  y: -5,
+                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)"
+                }}
+                className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500/50 
+                         rounded-lg p-4 flex flex-col items-center justify-center transition-all duration-300"
+              >
+                <div className="w-14 h-14 mb-3 flex items-center justify-center">
+                {skill.icon}
+                </div>
+                <p className="text-center text-gray-300">{skill.name}</p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Projects Section */}
         <section className="py-32 px-4" id="projects">
