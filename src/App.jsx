@@ -121,7 +121,7 @@ const Portfolio = () => {
       company: "Ignicult",
       period: "Present",
       description:
-        "Designing and implementing scalable, high-performance web applications for a revolutionary hyper-casual gaming platform integrating off-chain and on-chain rewards.",
+        "Designing and implementing scalable, high-performance web applications for a revolutionary hyper-casual gaming platform integrating off-chain and on-chain rewards. Managing the entire development lifecycle, from design to enduser application, ensuring seamless integration of Web3 technologies(sdk).",
       technologies: [""],
     },
   ];
@@ -384,7 +384,10 @@ const getIconPath = (skillName) => {
       mixBlendMode: "normal",
     },
   };
-
+  const handleCompanyClick = () => {
+    const companyLink = "https://ignicult.com/";
+    window.open(companyLink, "_blank", "noopener noreferrer");
+  }
   const handleIconClick = (type, href, message) => {
     if (type === "link") {
       window.open(href, "_blank", "noopener noreferrer");
@@ -392,7 +395,8 @@ const getIconPath = (skillName) => {
       const mailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${
         href.split(":")[1]
       }`;
-      window.open(mailLink, "_blank", "noopener noreferrer");
+      // window.open(mailLink, "_blank", "noopener noreferrer");
+      alert("Email : "+ href.split(":")[1]);
     } else if (type === "alert") {
       alert(message);
     }
@@ -722,19 +726,9 @@ const getIconPath = (skillName) => {
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {exp.title}
                     </h3>
-                    <p className="text-pink-400 mb-2">{exp.company}</p>
+                    <p onClick={handleCompanyClick} className="text-pink-400 cursor-pointer mb-2">{exp.company}</p>
                     <p className="text-gray-400 mb-4">{exp.period}</p>
                     <p className="text-gray-300 mb-4">{exp.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {exp.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 bg-gray-800 rounded-full text-xs text-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
                   </motion.div>
                 </motion.div>
               ))}
