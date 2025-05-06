@@ -121,7 +121,7 @@ const Portfolio = () => {
       company: "Ignicult",
       period: "Present",
       description:
-        "Designing and implementing scalable, high-performance web applications for a revolutionary hyper-casual gaming platform integrating off-chain and on-chain rewards. Managing the entire development lifecycle, from design to enduser application, ensuring seamless integration of Web3 technologies(sdk).",
+        "Designing and implementing scalable, high-performance web applications for a revolutionary hyper-casual gaming platform integrating off-chain and on-chain rewards. Managing the entire development lifecycle, from design to enduser application, ensuring seamless integration of Web3 technologies(sdk). View the design and frontend made - ",
       technologies: [""],
     },
   ];
@@ -728,7 +728,9 @@ const getIconPath = (skillName) => {
                     </h3>
                     <p onClick={handleCompanyClick} className="text-pink-400 cursor-pointer mb-2">{exp.company}</p>
                     <p className="text-gray-400 mb-4">{exp.period}</p>
-                    <p className="text-gray-300 mb-4">{exp.description}</p>
+                    <p className="text-gray-300 mb-4">{exp.description}
+                    <a href="https://ignicult.vercel.app/">Ignicult</a>
+                    </p>
                   </motion.div>
                 </motion.div>
               ))}
