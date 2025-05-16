@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaDatabase, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs, SiTailwindcss, SiFramer, SiSolidity, SiWeb3Dotjs, SiRender, SiVercel, SiGodaddy } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs,SiRailway ,SiPostgresql , SiTailwindcss, SiFramer, SiSolidity, SiWeb3Dotjs, SiRender, SiVercel, SiGodaddy } from 'react-icons/si';
 import { CgCPlusPlus } from 'react-icons/cg';
 import {
   GithubIcon,
@@ -48,6 +48,8 @@ const Portfolio = () => {
         { name: "React.js", icon: <FaReact size={40} color="#61DAFB" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss size={40} color="#06B6D4" /> },
         { name: "Framer Motion", icon: <SiFramer size={40} color="#0055FF" /> },
+        { name: "Next.js", icon: <SiNextdotjs size={40} color="#b1bbc9" /> },
+        { name: "Redux", icon: <SiRedux size={40} color="#764ABC" /> },
       ],
     },
     {
@@ -58,6 +60,7 @@ const Portfolio = () => {
         { name: "Django", icon: <SiDjango size={40} color="#FFFFFF" /> },
         { name: "Flask", icon: <SiFlask size={40} color="#dddddd" /> },
         { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> },
       ],
     },
     {
@@ -65,6 +68,7 @@ const Portfolio = () => {
       items: [
         { name: "Git & GitHub", icon: <FaGitAlt size={40} color="#F05032" /> },
         { name: "Render", icon: <SiRender size={40} color="#46E3B7" /> },
+        { name: "Railway", icon: <SiRailway size={40} color="#FF9900" /> },
         { name: "Vercel", icon: <SiVercel size={40} color="#000000" /> },
         { name: "GoDaddy", icon: <SiGodaddy size={40} color="#1BDB80" /> },
       ],
@@ -72,7 +76,7 @@ const Portfolio = () => {
     {
       category: "Currently Learning",
       items: [
-        { name: "Solidity & Thirdweb", icon: <SiSolidity size={40} color="#363636" /> },
+        { name: "Solidity", icon: <SiSolidity size={40} color="#363636" /> },
         { name: "Web3", icon: <SiWeb3Dotjs size={40} color="#F16822" /> },
       ],
     },
@@ -219,7 +223,7 @@ const Portfolio = () => {
       // Frontend
       "React.js": "react/react-original.svg",
       "Tailwind CSS": "tailwindcss/tailwindcss-plain.svg",
-      "Framer Motion": "react/react-original.svg", // Using React icon as placeholder
+      "Framer Motion": "react/react-original.svg",
 
       // Backend
       "Node.js": "nodejs/nodejs-original.svg",
@@ -228,16 +232,16 @@ const Portfolio = () => {
 
       // Tools & Others
       "Git & GitHub": "git/git-original.svg",
-      "Render": "amazonwebservices/amazonwebservices-original.svg", // Using AWS as placeholder
-      "Vercel": "nextjs/nextjs-original.svg", // Using Next.js as placeholder 
-      "GoDaddy": "digitalocean/digitalocean-original.svg", // Using DO as placeholder
+      "Render": "amazonwebservices/amazonwebservices-original.svg", 
+      "Vercel": "nextjs/nextjs-original.svg", 
+      "GoDaddy": "digitalocean/digitalocean-original.svg", 
 
       // Currently Learning
-      "Solidity & Thirdweb": "ethereum/ethereum-original.svg", // Using Ethereum as placeholder
-      "Web3": "ethereum/ethereum-original.svg", // Using Ethereum as placeholder
+      "Solidity & Thirdweb": "ethereum/ethereum-original.svg",
+      "Web3": "ethereum/ethereum-original.svg", 
     };
 
-    return iconMap[skillName] || "react/react-original.svg"; // Default fallback
+    return iconMap[skillName] || "react/react-original.svg";
   };
 
   const navigationItems = [
