@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaDatabase, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs,SiRailway ,SiPostgresql , SiTailwindcss, SiFramer, SiSolidity, SiWeb3Dotjs, SiRender, SiVercel, SiGodaddy } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs,SiRailway ,SiPostgresql , SiTailwindcss, SiFramer, SiSolidity, SiWeb3Dotjs, SiRender,SiTypescript, SiVercel, SiGodaddy } from 'react-icons/si';
 import { CgCPlusPlus } from 'react-icons/cg';
+import { DiRedis } from "react-icons/di";
 import {
   GithubIcon,
   MailIcon,
@@ -40,6 +41,7 @@ const Portfolio = () => {
         { name: "CSS", icon: <FaCss3Alt size={40} color="#1572B6" /> },
         { name: "C++", icon: <CgCPlusPlus size={40} color="#00599C" /> },
         { name: "Python", icon: <FaPython size={40} color="#ffea75" /> },
+        { name: "TypeScript", icon: <SiTypescript size={40} color="#ADD8E6" /> }
       ],
     },
     {
@@ -61,6 +63,7 @@ const Portfolio = () => {
         { name: "Flask", icon: <SiFlask size={40} color="#dddddd" /> },
         { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" /> },
         { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> },
+        { name: "Redis", icon: <DiRedis size={40} color="#FF0000" /> },
       ],
     },
     {
