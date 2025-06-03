@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaDatabase, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs,SiRailway ,SiPostgresql , SiTailwindcss, SiFramer, SiSolidity, SiWeb3Dotjs, SiRender,SiTypescript, SiVercel, SiGodaddy } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs,SiRailway ,SiPostgresql , SiTailwindcss, SiFramer, SiApachekafka, SiSolidity, SiWeb3Dotjs, SiRender,SiTypescript, SiVercel, SiGodaddy } from 'react-icons/si';
 import { CgCPlusPlus } from 'react-icons/cg';
 import { DiRedis } from "react-icons/di";
 import {
@@ -64,6 +64,7 @@ const Portfolio = () => {
         { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" /> },
         { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> },
         { name: "Redis", icon: <DiRedis size={40} color="#FF0000" /> },
+        { name: "Kafka", icon: <SiApachekafka size={40} color="#FFFFFF" /> }
       ],
     },
     {
