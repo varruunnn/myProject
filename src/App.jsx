@@ -1,9 +1,37 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaDatabase, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiRedux, SiDjango, SiFlask, SiNextdotjs,SiRailway ,SiPostgresql , SiTailwindcss, SiFramer, SiApachekafka, SiSolidity, SiWeb3Dotjs, SiRender,SiTypescript, SiVercel, SiGodaddy } from 'react-icons/si';
-import { CgCPlusPlus } from 'react-icons/cg';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaDatabase,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiMongodb,
+  SiExpress,
+  SiRedux,
+  SiDjango,
+  SiFlask,
+  SiNextdotjs,
+  SiRailway,
+  SiPostgresql,
+  SiTailwindcss,
+  SiFramer,
+  SiApachekafka,
+  SiSolidity,
+  SiWeb3Dotjs,
+  SiRender,
+  SiTypescript,
+  SiVercel,
+  SiGodaddy,
+} from "react-icons/si";
+import { CgCPlusPlus } from "react-icons/cg";
 import { DiRedis } from "react-icons/di";
+import ReactGA from "react-ga4";
 import {
   GithubIcon,
   MailIcon,
@@ -32,6 +60,16 @@ const Portfolio = () => {
     restDelta: 0.001,
   });
 
+  useEffect(() => {
+    const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+    if (measurementId) {
+      ReactGA.initialize(measurementId);
+      ReactGA.send("pageview");
+    } else {
+      console.warn("⚠️ GA ID not found in import.meta.env");
+    }
+  }, []);
+
   const skills = [
     {
       category: "Programming Languages",
@@ -41,14 +79,20 @@ const Portfolio = () => {
         { name: "CSS", icon: <FaCss3Alt size={40} color="#1572B6" /> },
         { name: "C++", icon: <CgCPlusPlus size={40} color="#00599C" /> },
         { name: "Python", icon: <FaPython size={40} color="#ffea75" /> },
-        { name: "TypeScript", icon: <SiTypescript size={40} color="#ADD8E6" /> }
+        {
+          name: "TypeScript",
+          icon: <SiTypescript size={40} color="#ADD8E6" />,
+        },
       ],
     },
     {
       category: "Frontend",
       items: [
         { name: "React.js", icon: <FaReact size={40} color="#61DAFB" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss size={40} color="#06B6D4" /> },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss size={40} color="#06B6D4" />,
+        },
         { name: "Framer Motion", icon: <SiFramer size={40} color="#0055FF" /> },
         { name: "Next.js", icon: <SiNextdotjs size={40} color="#b1bbc9" /> },
         { name: "Redux", icon: <SiRedux size={40} color="#764ABC" /> },
@@ -62,9 +106,12 @@ const Portfolio = () => {
         { name: "Django", icon: <SiDjango size={40} color="#FFFFFF" /> },
         { name: "Flask", icon: <SiFlask size={40} color="#dddddd" /> },
         { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" /> },
-        { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql size={40} color="#336791" />,
+        },
         { name: "Redis", icon: <DiRedis size={40} color="#FF0000" /> },
-        { name: "Kafka", icon: <SiApachekafka size={40} color="#FFFFFF" /> }
+        { name: "Kafka", icon: <SiApachekafka size={40} color="#FFFFFF" /> },
       ],
     },
     {
@@ -141,11 +188,19 @@ const Portfolio = () => {
         "This is a web-based application that allows users to generate dynamic, creative p5.js animations using natural language prompts. Built using React, Node.js, and Google's Gemini API, this tool transforms plain English into live-running code with a visual preview.",
       longDescription:
         "🚀 Built a full-stack web app that transforms natural language prompts into dynamic 2D animations using AI and p5.js.🤖 Integrated Google Gemini (LLM) to generate executable p5.js code from user input in real time.💡 Designed a modular React frontend with live canvas rendering, code preview, and HTML export features.🧩 Architected a Node.js + Express backend with robust API routing and environment-based Gemini key handling.🖼️ Developed a custom p5.js sandbox for securely executing and rendering generated code in-browser.⚡ Reduced manual animation prototyping time by automating creative sketch generation from simple text.",
-      technologies: ["React", "Node.js"," Express", "p5.js", "Google Gemini", "TailwindCSS"],
+      technologies: [
+        "React",
+        "Node.js",
+        " Express",
+        "p5.js",
+        "Google Gemini",
+        "TailwindCSS",
+      ],
       img: "/animatedvideogenrator.png",
       color: "#4f46e5",
       demoLink: "https://animated-videos-genrator.vercel.app/",
-      githubLink: "https://github.com/varruunnn/animated-videos-genrator/tree/main",
+      githubLink:
+        "https://github.com/varruunnn/animated-videos-genrator/tree/main",
     },
     {
       name: "BigGameWars",
@@ -219,9 +274,9 @@ const Portfolio = () => {
   const getIconPath = (skillName) => {
     const iconMap = {
       // Programming Languages
-      "JavaScript": "javascript/javascript-original.svg",
-      "HTML5": "html5/html5-original.svg",
-      "CSS": "css3/css3-original.svg",
+      JavaScript: "javascript/javascript-original.svg",
+      HTML5: "html5/html5-original.svg",
+      CSS: "css3/css3-original.svg",
       "C++": "cplusplus/cplusplus-original.svg",
 
       // Frontend
@@ -231,18 +286,18 @@ const Portfolio = () => {
 
       // Backend
       "Node.js": "nodejs/nodejs-original.svg",
-      "Express": "express/express-original.svg",
-      "MongoDB": "mongodb/mongodb-original.svg",
+      Express: "express/express-original.svg",
+      MongoDB: "mongodb/mongodb-original.svg",
 
       // Tools & Others
       "Git & GitHub": "git/git-original.svg",
-      "Render": "amazonwebservices/amazonwebservices-original.svg", 
-      "Vercel": "nextjs/nextjs-original.svg", 
-      "GoDaddy": "digitalocean/digitalocean-original.svg", 
+      Render: "amazonwebservices/amazonwebservices-original.svg",
+      Vercel: "nextjs/nextjs-original.svg",
+      GoDaddy: "digitalocean/digitalocean-original.svg",
 
       // Currently Learning
       "Solidity & Thirdweb": "ethereum/ethereum-original.svg",
-      "Web3": "ethereum/ethereum-original.svg", 
+      Web3: "ethereum/ethereum-original.svg",
     };
 
     return iconMap[skillName] || "react/react-original.svg";
@@ -407,13 +462,14 @@ const Portfolio = () => {
   const handleCompanyClick = () => {
     const companyLink = "https://ignicult.com/";
     window.open(companyLink, "_blank", "noopener noreferrer");
-  }
+  };
   const handleIconClick = (type, href, message) => {
     if (type === "link") {
       window.open(href, "_blank", "noopener noreferrer");
     } else if (type === "mail") {
-      const mailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${href.split(":")[1]
-        }`;
+      const mailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${
+        href.split(":")[1]
+      }`;
       // window.open(mailLink, "_blank", "noopener noreferrer");
       alert("Email : " + href.split(":")[1]);
     } else if (type === "alert") {
@@ -487,10 +543,11 @@ const Portfolio = () => {
                   whileTap={{ scale: 0.9 }}
                   onMouseEnter={buttonEnter}
                   onMouseLeave={buttonLeave}
-                  className={`relative flex items-center justify-center p-2 rounded-full transition-colors ${activeSection === item.id
+                  className={`relative flex items-center justify-center p-2 rounded-full transition-colors ${
+                    activeSection === item.id
                       ? "bg-pink-500 text-white"
                       : "bg-gray-800/50 text-gray-400 hover:text-white"
-                    }`}
+                  }`}
                 >
                   <item.icon className="w-5 h-5" />
                   <span className="absolute left-full ml-4 whitespace-nowrap bg-gray-900/80 text-white text-sm py-1 px-3 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
@@ -516,10 +573,11 @@ const Portfolio = () => {
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`flex flex-col items-center p-2 ${activeSection === item.id
+                  className={`flex flex-col items-center p-2 ${
+                    activeSection === item.id
                       ? "text-pink-500"
                       : "text-gray-400"
-                    }`}
+                  }`}
                 >
                   <item.icon className="w-5 h-5" />
                   <span className="text-xs mt-1">{item.label}</span>
@@ -743,9 +801,15 @@ const Portfolio = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {exp.title}
                     </h3>
-                    <p onClick={handleCompanyClick} className="text-pink-400 cursor-pointer mb-2">{exp.company}</p>
+                    <p
+                      onClick={handleCompanyClick}
+                      className="text-pink-400 cursor-pointer mb-2"
+                    >
+                      {exp.company}
+                    </p>
                     <p className="text-gray-400 mb-4">{exp.period}</p>
-                    <p className="text-gray-300 mb-4">{exp.description}
+                    <p className="text-gray-300 mb-4">
+                      {exp.description}
                       <a href="https://ignicult.vercel.app/">Ignicult</a>
                     </p>
                   </motion.div>
@@ -792,7 +856,7 @@ const Portfolio = () => {
                         key={idx}
                         whileHover={{
                           y: -5,
-                          boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)"
+                          boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
                         }}
                         className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500/50 
                          rounded-lg p-4 flex flex-col items-center justify-center transition-all duration-300"
@@ -800,7 +864,9 @@ const Portfolio = () => {
                         <div className="w-14 h-14 mb-3 flex items-center justify-center">
                           {skill.icon}
                         </div>
-                        <p className="text-center text-gray-300">{skill.name}</p>
+                        <p className="text-center text-gray-300">
+                          {skill.name}
+                        </p>
                       </motion.div>
                     ))}
                   </div>
@@ -977,7 +1043,10 @@ const Portfolio = () => {
                 viewport={{ once: true }}
                 className="bg-gray-900/50 rounded-xl p-8 backdrop-blur-sm border border-gray-800 hover:border-pink-500/50 transition-colors"
               >
-                <img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="profile" />
+                <img
+                  src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif"
+                  alt="profile"
+                />
               </motion.div>
             </div>
           </div>
