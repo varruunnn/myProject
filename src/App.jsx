@@ -182,6 +182,24 @@ const Portfolio = () => {
 
   const projects = [
     {
+      name: "OpenGet - Parallel Download Manager",
+      description:
+        "A powerful CLI + Web download manager that speeds up large file downloads using multithreading and chunking, built with Python and Flask.",
+      longDescription:
+        "⚡ Built a multithreaded download accelerator that boosts speed by 1.3x+ via parallel chunk downloading.🧠 Architected a modular Python codebase with clear separation of CLI, core downloader logic, and resumable download support.🌐 Added a real-time web UI using Flask + JS to visualize progress, status, and control download jobs.⏸️ Implemented pause/resume functionality with persistent job tracking, even across browser reloads or connection drops.📁 Designed a clean API backend to manage download jobs, track status, and expose resumable endpoints.🧪 Verified chunk-based performance improvement and built a test harness to benchmark against traditional methods.",
+      technologies: [
+        "Python",
+        "Flask",
+        "Multithreading",
+        "Requests",
+        "JavaScript",
+        "HTML/CSS",
+      ],
+      img: "/openget.png",
+      color: "#10b981",
+      githubLink: "https://github.com/varruunnn/OpenGet",
+    },
+    {
       name: "Animated Videos Genrator",
       description:
         "This is a web-based application that allows users to generate dynamic, creative p5.js animations using natural language prompts. Built using React, Node.js, and Google's Gemini API, this tool transforms plain English into live-running code with a visual preview.",
@@ -947,8 +965,13 @@ const Portfolio = () => {
                           onMouseLeave={buttonLeave}
                           className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center"
                         >
-                          Live Demo{" "}
-                          <ExternalLinkIcon className="ml-2 h-4 w-4" />
+                          {index !== 0 && (
+                            <div>
+                              {" "}
+                              Live Demo{" "}
+                              <ExternalLinkIcon className="ml-2 h-4 w-4" />
+                            </div>
+                          )}
                         </motion.a>
                         <motion.a
                           href={project.githubLink}
