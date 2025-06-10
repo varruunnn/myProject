@@ -59,7 +59,6 @@ const Portfolio = () => {
     damping: 30,
     restDelta: 0.001,
   });
-
   useEffect(() => {
     const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
     if (measurementId) {
