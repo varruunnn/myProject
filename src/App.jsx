@@ -680,7 +680,7 @@ const Portfolio = () => {
                   transition={{ delay: 1.7, duration: 1 }}
                 >
                   <a
-                    href="https://snowcoder.hashnode.dev/"
+                    href="https://hashnode.com/@varuunnn"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:underline text-lg inline-flex items-center"
