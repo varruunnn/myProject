@@ -84,7 +84,7 @@ const Portfolio = () => {
         { name: "AWS", icon: <FaAws size={40} color="#FFFFFF" /> },
         { name: "Render", icon: <SiRender size={40} color="#46E3B7" /> },
         { name: "Railway", icon: <SiRailway size={40} color="#FF9900" /> },
-        { name: "Vercel", icon: <SiVercel size={40} color="#000000" /> },
+        { name: "Vercel", icon: <SiVercel size={40} color="#FFFFFF" /> },
       ],
     },
     {
@@ -230,7 +230,7 @@ const Portfolio = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <nav className="flex justify-center">
-            <div className="flex space-x-8">
+            <div className="flex space-x-8 sm:space-x-4 overflow-x-auto scrollbar-none">
               {sections.map((section) => (
                 <button
                   key={section.id}

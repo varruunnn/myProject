@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+CHROME SAFARI */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+/* FIREFOX */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+/* EDGE */
+.scrollbar-none {
+  -ms-overflow-style: none;
+}
