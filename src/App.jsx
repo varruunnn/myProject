@@ -513,7 +513,7 @@ const Portfolio = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="py-16"
+                className="py-16 overflow-x-hidden"
               >
                 <div className="text-center mb-12">
                   <div className="flex items-center justify-center mb-4">
@@ -533,7 +533,9 @@ const Portfolio = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="bg-gray-900/50 rounded-xl p-6 border border-gray-800 hover:border-gray-600 transition-all duration-200"
+                        className="bg-gray-900/50 rounded-xl p-6 border border-gray-800 hover:border-gray-600 transition-all duration-200
+                        max-[361px]:mx-[-15px]
+                        "
                       >
                         <button
                           onClick={() => handleContactClick(contact.href, contact.label)}
