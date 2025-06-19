@@ -9,7 +9,7 @@ import {
   FaPython,
   FaGitAlt,
   FaAws,
-  FaRust 
+  FaRust
 } from "react-icons/fa";
 import {
   SiMongodb,
@@ -32,7 +32,7 @@ import {
   Code2Icon,
   BriefcaseIcon,
   GraduationCapIcon,
-  Container 
+  Container
 } from "lucide-react";
 import { SiFramer, SiDjango, SiFlask, SiRender, SiRailway, SiVercel, SiGodaddy, SiSolidity, SiWeb3Dotjs, SiApachekafka } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
@@ -40,7 +40,7 @@ import { DiRedis } from "react-icons/di";
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [hoveredSkill, setHoveredSkill] = useState(null);
-  const [isDark,setisDark] = useState(false);
+  const [isDark, setisDark] = useState(false);
 
   const skills = [
     {
@@ -101,11 +101,20 @@ const Portfolio = () => {
     {
       title: "Full Stack Developer Intern",
       company: "Ignicult",
-      period: "Present",
-      description: "Designing and implementing scalable web applications for gaming platform integrating Web3 technologies.",
-      technologies: ["React", "Node.js", "ThirdWeb Sdk"]
+      period: "Feb-2025-April-2025",
+      description: `Designed and implemented scalable web applications for a Web3-integrated gaming platform. 
+Built two frontend pages:
+- Main Platform Page: Used Thirdweb SDK for wallet connectivity and Web3 interactions. Integrated backend APIs for dynamic data handling.
+- Analytics Dashboard: Displayed key metrics using API data from the backend to monitor platform performance.`,
+      technologies: ["React", "Node.js", "ThirdWeb SDK", "TS", "REST APIs"],
+      links: [
+        { label: "Main Platform Page", url: "https://ignicult.vercel.app/"},
+        { label: "Analytics Dashboard", url: "https://ignicult-inside-i3l5.vercel.app/" }
+      ]
     }
   ];
+
+
 
   const projects = [
     {
@@ -151,7 +160,7 @@ const Portfolio = () => {
       githubLink: "https://github.com/varruunnn/RealTimeEditor.git",
       featured: true
     },
-        {
+    {
       name: "VideoPlayer",
       description: "A browser-based video player built with React and MongoDB that enables seamless upload and playback with persistent video metadata storage.",
       longDescription: "Developed a video player web application using React for the frontend and MongoDB for video metadata storage. Implemented seamless video upload and playbook functionality, enabling users to watch videos directly in the browser without additional software. Ensured persistent video availability by securely storing video metadata in MongoDB, allowing access even after page reloads. Optimized for user convenience with a fully browser-based solution, eliminating the need for app installation.",
@@ -162,7 +171,7 @@ const Portfolio = () => {
       githubLink: "https://github.com/varruunnn/videoPlayer",
       featured: false
     },
-        {
+    {
       name: "Dynamic Event Calendar",
       description: "An interactive calendar app with drag-and-drop event management, filtering, conflict detection, and export capabilities in JSON and CSV formats.",
       longDescription: "A dynamic and interactive calendar app that allows users to add, edit, and manage events. The app includes features like event filtering, event export (JSON and CSV formats), and the ability to drag-and-drop events across different dates with time conflict checks. Add Events: Easily add events to specific dates, with customizable name, description, start time, end time, and category. Drag-and-Drop Events: Move events across different days and times with automatic conflict checks. Event Filtering: Filter events by name or description with a search bar to quickly find relevant events. Event Management: Edit event details, delete events, or add them back to any selected day. Export Events: Export the current month's events in either JSON or CSV format for easy data sharing. Responsive Design: Works seamlessly across devices with a mobile-friendly interface.",
@@ -213,7 +222,7 @@ const Portfolio = () => {
       window.open(href, "_blank", "noopener noreferrer");
     }
   };
-  const changeTheme = (e) =>{
+  const changeTheme = (e) => {
     alert("changedTHmee")
   }
 
@@ -421,6 +430,21 @@ const Portfolio = () => {
                             </span>
                           ))}
                         </div>
+                        {exp.links && exp.links.length > 0 && (
+                          <div className="mt-4 gap-2 flex flex-col-1">
+                            {exp.links.map((link, linkIndex) => (
+                              <a
+                                key={linkIndex}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline block text-sm"
+                              >
+                                🔗 {link.label}
+                              </a>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   ))}
