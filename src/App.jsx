@@ -19,6 +19,7 @@ import {
   SiPostgresql,
   SiTailwindcss,
   SiTypescript,
+  SiDrizzle
 } from "react-icons/si";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
@@ -75,6 +76,7 @@ const Portfolio = () => {
         { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> },
         { name: "Redis", icon: <DiRedis size={40} color="#FF0000" /> },
         { name: "Kafka", icon: <SiApachekafka size={40} color="#FFFFFF" /> },
+        { name: "Drizzle", icon: <SiDrizzle size={40} color="#8BC68D" /> },
       ],
     },
     {
@@ -108,7 +110,7 @@ Built two frontend pages:
 - Analytics Dashboard: Displayed key metrics using API data from the backend to monitor platform performance.`,
       technologies: ["React", "Node.js", "ThirdWeb SDK", "TS", "REST APIs"],
       links: [
-        { label: "Main Platform Page", url: "https://ignicult.vercel.app/"},
+        { label: "Main Platform Page", url: "https://ignicult.vercel.app/" },
         { label: "Analytics Dashboard", url: "https://ignicult-inside-i3l5.vercel.app/" }
       ]
     }
