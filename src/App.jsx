@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaGitAlt,
-  FaAws,
-  FaRust
-} from "react-icons/fa";
-import {
-  SiMongodb,
-  SiExpress,
-  SiRedux,
-  SiNextdotjs,
-  SiPostgresql,
-  SiTailwindcss,
-  SiTypescript,
-  SiDrizzle
-} from "react-icons/si";
-import { CgCPlusPlus } from "react-icons/cg";
+import { contactLinks } from "./utils/contactLinks";
+import { skills } from "./utils/skills";
+import { projects } from "./utils/projects";
+import { experiences } from "./utils/experiences";
 import {
   GithubIcon,
   MailIcon,
@@ -35,187 +17,15 @@ import {
   GraduationCapIcon,
   Container
 } from "lucide-react";
-import { SiFramer, SiDjango, SiFlask, SiRender, SiRailway, SiVercel, SiGodaddy, SiSolidity, SiWeb3Dotjs, SiApachekafka } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const [isDark, setisDark] = useState(false);
-
-  const skills = [
-    {
-      category: "Programming Languages",
-      items: [
-        { name: "JavaScript", icon: <FaJs size={40} color="#F7DF1E" /> },
-        { name: "HTML5", icon: <FaHtml5 size={40} color="#E34F26" /> },
-        { name: "CSS", icon: <FaCss3Alt size={40} color="#1572B6" /> },
-        { name: "C++", icon: <CgCPlusPlus size={40} color="#00599C" /> },
-        { name: "Python", icon: <FaPython size={40} color="#ffea75" /> },
-        { name: "TypeScript", icon: <SiTypescript size={40} color="#ADD8E6" /> },
-      ],
-    },
-    {
-      category: "Frontend",
-      items: [
-        { name: "React.js", icon: <FaReact size={40} color="#61DAFB" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss size={40} color="#06B6D4" /> },
-        { name: "Framer Motion", icon: <SiFramer size={40} color="#0055FF" /> },
-        { name: "Next.js", icon: <SiNextdotjs size={40} color="#b1bbc9" /> },
-        { name: "Redux", icon: <SiRedux size={40} color="#764ABC" /> },
-      ],
-    },
-    {
-      category: "Backend",
-      items: [
-        { name: "Node.js", icon: <FaNodeJs size={40} color="#339933" /> },
-        { name: "Express", icon: <SiExpress size={40} color="#FFFFFF" /> },
-        { name: "Django", icon: <SiDjango size={40} color="#FFFFFF" /> },
-        { name: "Flask", icon: <SiFlask size={40} color="#dddddd" /> },
-        { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" /> },
-        { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> },
-        { name: "Redis", icon: <DiRedis size={40} color="#FF0000" /> },
-        { name: "Kafka", icon: <SiApachekafka size={40} color="#FFFFFF" /> },
-        { name: "Drizzle", icon: <SiDrizzle size={40} color="#8BC68D" /> },
-      ],
-    },
-    {
-      category: "Tools & Others",
-      items: [
-        { name: "Git & GitHub", icon: <FaGitAlt size={40} color="#F05032" /> },
-        { name: "AWS", icon: <FaAws size={40} color="#FFFFFF" /> },
-        { name: "Render", icon: <SiRender size={40} color="#46E3B7" /> },
-        { name: "Railway", icon: <SiRailway size={40} color="#FF9900" /> },
-        { name: "Vercel", icon: <SiVercel size={40} color="#FFFFFF" /> },
-      ],
-    },
-    {
-      category: "Currently Learning",
-      items: [
-        { name: "Solidity", icon: <SiSolidity size={40} color="#363636" /> },
-        { name: "Web3", icon: <SiWeb3Dotjs size={40} color="#F16822" /> },
-        { name: "Rust", icon: <FaRust size={44} color="#FF9900" /> },
-      ],
-    },
-  ];
-
-  const experiences = [
-    {
-      title: "Full Stack Developer Intern",
-      company: "Ignicult",
-      period: "Feb-2025-April-2025",
-      description: `Designed and implemented scalable web applications for a Web3-integrated gaming platform. 
-Built two frontend pages:
-- Main Platform Page: Used Thirdweb SDK for wallet connectivity and Web3 interactions. Integrated backend APIs for dynamic data handling.
-- Analytics Dashboard: Displayed key metrics using API data from the backend to monitor platform performance.`,
-      technologies: ["React", "Node.js", "ThirdWeb SDK", "TS", "REST APIs"],
-      links: [
-        { label: "Main Platform Page", url: "https://ignicult.vercel.app/" },
-        { label: "Analytics Dashboard", url: "https://ignicult-inside-i3l5.vercel.app/" }
-      ]
-    }
-  ];
-
-
-
-  const projects = [
-    {
-      name: "OpenGet - Parallel Download Manager",
-      description: "A powerful CLI + Web download manager that speeds up large file downloads using multithreading and chunking, built with Python and Flask.",
-      longDescription: "⚡ Built a multithreaded download accelerator that boosts speed by 1.3x+ via parallel chunk downloading.🧠 Architected a modular Python codebase with clear separation of CLI, core downloader logic, and resumable download support.🌐 Added a real-time web UI using Flask + JS to visualize progress, status, and control download jobs.⏸️ Implemented pause/resume functionality with persistent job tracking, even across browser reloads or connection drops.📁 Designed a clean API backend to manage download jobs, track status, and expose resumable endpoints.🧪 Verified chunk-based performance improvement and built a test harness to benchmark against traditional methods.",
-      technologies: ["Python", "Flask", "Multithreading", "Requests", "JavaScript", "HTML/CSS"],
-      img: "/openget.png",
-      color: "#10b981",
-      githubLink: "https://github.com/varruunnn/OpenGet",
-      featured: true
-    },
-    {
-      name: "Animated AI Videos Genrator",
-      description: "This is a web-based application that allows users to generate dynamic, creative p5.js animations using natural language prompts. Built using React, Node.js, and Google's Gemini API, this tool transforms plain English into live-running code with a visual preview.",
-      longDescription: "🚀 Built a full-stack web app that transforms natural language prompts into dynamic 2D animations using AI and p5.js.🤖 Integrated Google Gemini (LLM) to generate executable p5.js code from user input in real time.💡 Designed a modular React frontend with live canvas rendering, code preview, and HTML export features.🧩 Architected a Node.js + Express backend with robust API routing and environment-based Gemini key handling.🖼️ Developed a custom p5.js sandbox for securely executing and rendering generated code in-browser.⚡ Reduced manual animation prototyping time by automating creative sketch generation from simple text.",
-      technologies: ["React", "Node.js", "Express", "p5.js", "Google Gemini", "TailwindCSS"],
-      img: "/animatedvideogenrator1.png",
-      color: "#4f46e5",
-      demoLink: "https://animated-videos-genrator.vercel.app/",
-      githubLink: "https://github.com/varruunnn/animated-videos-genrator/tree/main",
-      featured: true
-    },
-    {
-      name: "BigGameWars",
-      description: "A MERN stack application facilitating team competitions for popular games like Valorant and BGMII. Features JWT authentication, user profiles, and admin communication. Deployed on GoDaddy with 1,000+ projected active users.",
-      longDescription: "Developed a full-stack web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) to facilitate team-based competitions for popular games like Valorant and BGMII. Implemented JWT-based authentication for secure login and signup functionality. Built features for user profile management, allowing users to update their usernames and contact the admin team directly. Purchased and deployed the application on a custom domain using GoDaddy, ensuring a professional and reliable web presence. Estimated to onboard 1,000+ active users within the first phase of its full launch, showcasing the platform's scalability and appeal to the gaming community.",
-      technologies: ["React", "Node.js", "MongoDB", "TailwindCSS", "JWT"],
-      img: "/biggamewars.png",
-      color: "#4f46e5",
-      demoLink: "https://www.biggamewars.com/",
-      githubLink: "https://github.com/varruunnn/GamingArena",
-      featured: true
-    },
-    {
-      name: "RealTimeEditor",
-      description: "A collaborative platform for frontend developers featuring live code editing, preview, design uploads, and real-time annotations using Socket.IO for synchronization.",
-      longDescription: "A modern real-time platform tailored for frontend developers and interviewers. This tool enables seamless collaboration by providing features to upload designs, live code with peers, and even annotate designs in real-time. Room Creation & Joining: Create or join rooms to collaborate in real-time. Live Code Editor: Write HTML, CSS, and JS using a powerful CodeMirror-based editor. Live Preview: Instantly preview your code changes in a live-rendered iframe. Image Upload: Upload Figma files or other design mockups to collaborate visually. Real-Time Annotations: Annotate designs using a pencil tool or eraser for live feedback. Socket.IO Integration: Ensures all changes, including code, annotations, and image uploads, are synchronized in real-time.",
-      technologies: ["React", "Node.js", "Socket.IO", "CodeMirror", "TailwindCSS"],
-      img: "/realtime.png",
-      color: "#0ea5e9",
-      demoLink: "https://real-time-editor-gilt.vercel.app",
-      githubLink: "https://github.com/varruunnn/RealTimeEditor.git",
-      featured: true
-    },
-    {
-      name: "VideoPlayer",
-      description: "A browser-based video player built with React and MongoDB that enables seamless upload and playback with persistent video metadata storage.",
-      longDescription: "Developed a video player web application using React for the frontend and MongoDB for video metadata storage. Implemented seamless video upload and playbook functionality, enabling users to watch videos directly in the browser without additional software. Ensured persistent video availability by securely storing video metadata in MongoDB, allowing access even after page reloads. Optimized for user convenience with a fully browser-based solution, eliminating the need for app installation.",
-      technologies: ["React", "Express", "MongoDB", "CSS"],
-      img: "/videoplay.png",
-      color: "#ec4899",
-      demoLink: "https://github.com/varruunnn/videoPlayer",
-      githubLink: "https://github.com/varruunnn/videoPlayer",
-      featured: false
-    },
-    {
-      name: "Dynamic Event Calendar",
-      description: "An interactive calendar app with drag-and-drop event management, filtering, conflict detection, and export capabilities in JSON and CSV formats.",
-      longDescription: "A dynamic and interactive calendar app that allows users to add, edit, and manage events. The app includes features like event filtering, event export (JSON and CSV formats), and the ability to drag-and-drop events across different dates with time conflict checks. Add Events: Easily add events to specific dates, with customizable name, description, start time, end time, and category. Drag-and-Drop Events: Move events across different days and times with automatic conflict checks. Event Filtering: Filter events by name or description with a search bar to quickly find relevant events. Event Management: Edit event details, delete events, or add them back to any selected day. Export Events: Export the current month's events in either JSON or CSV format for easy data sharing. Responsive Design: Works seamlessly across devices with a mobile-friendly interface.",
-      technologies: ["JavaScript", "HTML5", "CSS3", "LocalStorage"],
-      img: "/calender.png",
-      color: "#f59e0b",
-      demoLink: "https://dynamic-event-calendar-application-psi.vercel.app/",
-      githubLink: "https://github.com/varruunnn/Dynamic-Event-Calendar-Application.git",
-      featured: false
-    },
-    {
-      name: "Weather App",
-      description: "A React-based weather application using OpenWeatherMap API, featuring location search and responsive design with personal API key integration.",
-      longDescription: "Designed and developed a real-time weather web application using React and integrated with OpenWeatherMap API. Utilized a reliable weather API to provide accurate, up-to-date weather information for any location. Implemented user-friendly features, including search functionality and responsive design for seamless access across devices. Optimized API integration by allowing users to generate and use their own API key for personalized weather data.",
-      technologies: ["React", "Next.js", "ChakraUI", "API Integration"],
-      img: "/weather.png",
-      color: "#06b6d4",
-      demoLink: "https://weather-app-tau-olive-72.vercel.app/",
-      githubLink: "https://github.com/varruunnn/WeatherApp",
-      featured: false
-    },
-  ];
-  const contactLinks = [
-    {
-      icon: GithubIcon,
-      href: "https://github.com/varruunnn",
-      label: "GitHub",
-      username: "@varruunnn"
-    },
-    {
-      icon: TwitterIcon,
-      href: "https://x.com/_vaarruunn_",
-      label: "Twitter",
-      username: "@_vaarruunn_"
-    },
-    {
-      icon: MailIcon,
-      href: "mailto:varun.choudhary2512@gmail.com",
-      label: "Email",
-      username: "varun.choudhary2512@gmail.com"
-    }
-  ];
+  const aboutRef = useRef(null);
+  const expRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const handleContactClick = (href, label) => {
     if (label === "Email") {
@@ -224,9 +34,10 @@ Built two frontend pages:
       window.open(href, "_blank", "noopener noreferrer");
     }
   };
+
   const changeTheme = (e) => {
-    alert("changedTHmee")
-  }
+    alert("changedTheme");
+  };
 
   const sections = [
     { id: "about", label: "About", icon: UserIcon },
@@ -235,9 +46,27 @@ Built two frontend pages:
     { id: "contact", label: "Contact", icon: MailIcon }
   ];
 
+  const sectionRefs = {
+    about: aboutRef,
+    experience: expRef,
+    projects: projectsRef,
+    contact: contactRef
+  };
+
+  useEffect(() => {
+    const targetRef = sectionRefs[activeSection];
+    if (targetRef?.current) {
+      setTimeout(() => {
+        targetRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  }, [activeSection]);
+
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <nav className="flex justify-center">
@@ -260,12 +89,9 @@ Built two frontend pages:
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="pt-20">
         <div className="max-w-4xl mx-auto px-6">
-
-          {/* Profile Section */}
-          <section className="py-16 text-center">
+          <section ref={aboutRef} className="py-16 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -276,11 +102,18 @@ Built two frontend pages:
                 <img src="./pp.jpg" alt="" />
               </div>
               <h1 className="text-4xl font-bold mb-2">Hi, I'm Varun Choudhary</h1>
-              <p className="text-xl text-gray-300 mb-4">
-                <a href="https://hashnode.com/@varuunnn" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-200">
-                  Blogs
-                </a> | Full Stack Engineer
-              </p>
+              <div className="flex flex-col-3 items-center justify-center">
+                <p className="text-xl text-gray-300 mb-4">
+                  <a href="https://hashnode.com/@varuunnn" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-200">
+                    Blogs
+                  </a> | Full Stack Engineer | &nbsp;
+                </p>
+                <p className="text-xl text-gray-300 mb-4">
+                  <a href="https://leetcode.com/u/varrruuunnn" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-200">
+                    LeetCode
+                  </a>
+                </p>
+              </div>
               <div className="flex items-center justify-center space-x-2 text-gray-400 mb-6">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm">Available for opportunities</span>
@@ -317,8 +150,11 @@ Built two frontend pages:
               </button>
             </motion.div>
           </section>
+          <div ref={aboutRef} id="about-anchor" className="absolute"></div>
+          <div ref={expRef} id="experience-anchor" className="absolute"></div>
+          <div ref={projectsRef} id="projects-anchor" className="absolute"></div>
+          <div ref={contactRef} id="contact-anchor" className="absolute"></div>
 
-          {/* Dynamic Content Based on Active Section */}
           <AnimatePresence mode="wait">
             {activeSection === "about" && (
               <motion.section
@@ -329,8 +165,6 @@ Built two frontend pages:
                 transition={{ duration: 0.3 }}
                 className="py-16"
               >
-
-                {/* Education */}
                 <div className="mb-16">
                   <div className="flex items-center justify-center mb-8">
                     <GraduationCapIcon className="mr-3" size={24} />
@@ -347,7 +181,6 @@ Built two frontend pages:
                   </div>
                 </div>
 
-                {/* Skills */}
                 <div>
                   <div className="flex items-center justify-center mb-8">
                     <Code2Icon className="mr-3" size={24} />
@@ -384,6 +217,7 @@ Built two frontend pages:
 
             {activeSection === "experience" && (
               <motion.section
+                ref={expRef}
                 key="experience"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -462,6 +296,7 @@ Built two frontend pages:
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
                 className="py-16"
+                ref={projectsRef}
               >
                 <div className="text-center mb-12">
                   <div className="flex items-center justify-center mb-4">
@@ -525,7 +360,6 @@ Built two frontend pages:
                         alt={project.name}
                         className="w-full h-auto mt-6 rounded-lg border border-gray-800 object-cover"
                       />
-
                     </motion.div>
                   ))}
                 </div>
@@ -535,6 +369,7 @@ Built two frontend pages:
             {activeSection === "contact" && (
               <motion.section
                 key="contact"
+                ref={contactRef}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
