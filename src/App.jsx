@@ -150,7 +150,7 @@ const Portfolio = () => {
               </button>
             </motion.div>
           </section>
-          <div ref={aboutRef} id="about-anchor" className="absolute"></div>
+          
           <div ref={expRef} id="experience-anchor" className="absolute"></div>
           <div ref={projectsRef} id="projects-anchor" className="absolute"></div>
           <div ref={contactRef} id="contact-anchor" className="absolute"></div>
