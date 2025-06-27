@@ -9,6 +9,7 @@ import {
   FaAws,
   FaRust
 } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
 import {
   SiMongodb,
   SiExpress,
@@ -72,7 +73,7 @@ export const skills = [
       category: "Currently Learning",
       items: [
         { name: "Solidity", icon: <SiSolidity size={40} color="#363636" /> },
-        { name: "Web3", icon: <SiWeb3Dotjs size={40} color="#F16822" /> },
+        { name: "GenAi", icon: <GiArtificialIntelligence size={40} color="#FFFFFF" /> },
         { name: "Rust", icon: <FaRust size={44} color="#FF9900" /> },
       ],
     },
