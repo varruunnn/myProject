@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { contactLinks } from "./utils/contactLinks";
-import { skills } from "./utils/skills";
-import { projects } from "./utils/projects";
-import { experiences } from "./utils/experiences";
+import { contactLinks } from "./components/contactLinks";
+import { skills } from "./components/skills";
+import { projects } from "./components/projects";
+import { experiences } from "./components/experiences";
 import {
   GithubIcon,
   MailIcon,

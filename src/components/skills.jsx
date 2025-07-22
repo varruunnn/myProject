@@ -18,7 +18,8 @@ import {
   SiPostgresql,
   SiTailwindcss,
   SiTypescript,
-  SiDrizzle
+  SiDrizzle,
+  SiRecoil 
 } from "react-icons/si";
 import { CgCPlusPlus } from "react-icons/cg";
 import { SiFramer, SiDjango, SiFlask, SiRender, SiRailway, SiVercel, SiGodaddy, SiSolidity, SiWeb3Dotjs, SiApachekafka } from "react-icons/si";
@@ -42,6 +43,7 @@ export const skills = [
         { name: "Tailwind CSS", icon: <SiTailwindcss size={40} color="#06B6D4" /> },
         { name: "Framer Motion", icon: <SiFramer size={40} color="#0055FF" /> },
         { name: "Next.js", icon: <SiNextdotjs size={40} color="#b1bbc9" /> },
+        { name: "Recoil", icon: <SiRecoil size={40} color="#b1bbc9" /> },
         { name: "Redux", icon: <SiRedux size={40} color="#764ABC" /> },
       ],
     },
