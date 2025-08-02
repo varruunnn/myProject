@@ -140,7 +140,7 @@ const Portfolio = () => {
                 target="_blank"
                 className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition-colors"
               >
-                Download Resume
+                View Resume
               </a>
               <button
                 onClick={() => setActiveSection("contact")}
@@ -433,3 +433,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
