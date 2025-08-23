@@ -17,6 +17,7 @@ export const projects = [
     ],
     img: "/classSync.png",
     color: "#16a34a",
+    demoLink: "https://class-sync-sandy.vercel.app",
     githubLink: "https://github.com/varruunnn/ClassSync",
     featured: true,
   },
