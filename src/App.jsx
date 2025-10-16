@@ -47,7 +47,6 @@ const Portfolio = () => {
   ];
 
   const sectionRefs = {
-    about: aboutRef,
     experience: expRef,
     projects: projectsRef,
     contact: contactRef
@@ -98,9 +97,6 @@ const Portfolio = () => {
               transition={{ duration: 0.6 }}
               className="mb-8"
             >
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 mx-auto mb-6 flex items-center justify-center">
-                <img src="./pp.jpg" alt="" />
-              </div>
               <h1 className="text-4xl font-bold mb-2">Hi, I'm Varun Choudhary</h1>
               <div className="flex flex-col-3 items-center justify-center">
                 <p className="text-xl text-gray-300 mb-4">
