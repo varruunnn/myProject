@@ -10,6 +10,7 @@ import {
   FaRust
 } from "react-icons/fa";
 import { GiArtificialIntelligence } from "react-icons/gi";
+import { FaDocker } from "react-icons/fa6";
 import {
   SiMongodb,
   SiExpress,
@@ -66,6 +67,7 @@ export const skills = [
       items: [
         { name: "Git & GitHub", icon: <FaGitAlt size={40} color="#F05032" /> },
         { name: "AWS", icon: <FaAws size={40} color="#FFFFFF" /> },
+        { name: "Docker", icon: <FaDocker size={40} color="#FFFFFF" /> },
         { name: "Render", icon: <SiRender size={40} color="#46E3B7" /> },
         { name: "Railway", icon: <SiRailway size={40} color="#FF9900" /> },
         { name: "Vercel", icon: <SiVercel size={40} color="#FFFFFF" /> },
