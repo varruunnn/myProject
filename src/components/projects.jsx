@@ -1,5 +1,24 @@
 export const projects = [
   {
+    name: "ForgeQueue",
+    description:
+      "A production-grade distributed job queue system built from scratch with Bun and Redis, featuring atomic Lua scripting, crash recovery, and delayed job scheduling.",
+    longDescription:
+      "⚙️ ForgeQueue is a high-performance, distributed background job processing system engineered from first principles using TypeScript, Bun, and Redis.⚡ Designed for horizontal scalability, it implements the 'Reliable Queue' pattern to guarantee at-least-once delivery, ensuring zero data loss even during worker crashes.🛡️ Features a self-healing architecture with a dedicated Scheduler service that detects stalled jobs via visibility timeouts and recycles them.🔄 Manages concurrency and retries using custom atomic Lua scripts to prevent race conditions.⏳ Supports delayed job execution using Redis Sorted Sets and includes a Dead Letter Queue (DLQ) for isolating failing tasks.📉 A demonstration of distributed systems mastery, replicating the core logic of enterprise tools like BullMQ or Celery without external frameworks.",
+    technologies: [
+      "Bun",
+      "TypeScript",
+      "Redis",
+      "Lua",
+      "Distributed Systems",
+    ],
+    img: "/queue.png",
+    color: "#dc2626",
+    demoLink: "https://github.com/varruunnn/ForgeQueue", 
+    githubLink: "https://github.com/varruunnn/ForgeQueue",
+    featured: true,
+  },
+  {
     name: "ClassSync",
     description:
       "An AI-powered school management system built with MERN, Redis, and Google Gemini, designed to streamline educational administration while enhancing student, teacher, and parent engagement.",
