@@ -128,7 +128,7 @@ export const projects = [
     technologies: ["React", "Node.js", "MongoDB", "TailwindCSS", "JWT"],
     img: "/biggamewars.png",
     color: "#4f46e5",
-    demoLink: "https://www.biggamewars.com/",
+    demoLink: "https://biggamewars.vercel.app/",
     githubLink: "https://github.com/varruunnn/GamingArena",
     featured: true,
   },
