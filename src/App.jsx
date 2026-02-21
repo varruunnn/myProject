@@ -52,6 +52,26 @@ const Portfolio = () => {
     contact: contactRef
   };
 
+  const LazyImage = ({ src, alt }) => {
+    const [loaded, setLoaded] = useState(false);
+
+    return (
+      <div className="relative w-full mt-6">
+        {!loaded && (
+          <div className="absolute inset-0 animate-pulse bg-gray-800 rounded-lg border border-gray-800" />
+        )}
+
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          className={`w-full h-auto rounded-lg border border-gray-800 object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"
+            }`}
+        />
+      </div>
+    );
+  };
   useEffect(() => {
     const targetRef = sectionRefs[activeSection];
     if (targetRef?.current) {
@@ -146,7 +166,7 @@ const Portfolio = () => {
               </button>
             </motion.div>
           </section>
-          
+
           <div ref={expRef} id="experience-anchor" className="absolute"></div>
           <div ref={projectsRef} id="projects-anchor" className="absolute"></div>
           <div ref={contactRef} id="contact-anchor" className="absolute"></div>
@@ -351,11 +371,7 @@ const Portfolio = () => {
                           </span>
                         ))}
                       </div>
-                      <img
-                        src={project.img}
-                        alt={project.name}
-                        className="w-full h-auto mt-6 rounded-lg border border-gray-800 object-cover"
-                      />
+                      <LazyImage src={project.img} alt={project.name} />
                     </motion.div>
                   ))}
                 </div>
