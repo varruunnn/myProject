@@ -1,5 +1,23 @@
 export const projects = [
   {
+    "name": "PromptForge",
+    "description": "A full-stack AI prompt observability platform featuring a centralized API gateway, real-time telemetry tracking, and asynchronous LLM-as-a-judge evaluation.",
+    "longDescription": "PromptForge is an enterprise-grade AI observability and prompt management platform engineered to decouple LLM prompts from application source code. Built within a Turborepo monorepo, it features a high-performance Fastify API Gateway that acts as a proxy for LLM requests, logging latency and token telemetry in real-time to a Neon Serverless Postgres database. Implements an asynchronous 'LLM-as-a-judge' background polling worker that automatically evaluates AI outputs for quality without blocking the main client execution thread. Includes a Next.js App Router dashboard utilizing React Server Components and Recharts to visualize telemetry data, alongside an isolated dual-pane Prompt Playground for safe iteration. Designed to showcase modern distributed logging, background task processing, and full-stack API architecture.",
+    "technologies": [
+      "Next.js",
+      "Fastify",
+      "PostgreSQL",
+      "Turborepo",
+      "Drizzle ORM",
+      "Gemini AI"
+    ],
+    "img": "/promptforge.png",
+    "color": "#2563eb",
+    "demoLink": "https://drive.google.com/file/d/15o-i53WJ61ZImofUdiIBjSo0B2rQG8HB/view?usp=sharing",
+    "githubLink": "https://github.com/varruunnn/PromptForge",
+    "featured": true
+  },
+  {
     name: "ForgeQueue",
     description:
       "A production-grade distributed job queue system built from scratch with Bun and Redis, featuring atomic Lua scripting, crash recovery, and delayed job scheduling.",
@@ -14,7 +32,7 @@ export const projects = [
     ],
     img: "/queue.png",
     color: "#dc2626",
-    demoLink: "https://github.com/varruunnn/ForgeQueue", 
+    demoLink: "https://github.com/varruunnn/ForgeQueue",
     githubLink: "https://github.com/varruunnn/ForgeQueue",
     featured: true,
   },
