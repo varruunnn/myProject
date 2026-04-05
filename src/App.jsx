@@ -125,7 +125,7 @@ const Portfolio = () => {
                   </a> | Full Stack Engineer | &nbsp;
                 </p>
                 <p className="text-xl text-gray-300 mb-4">
-                  <a href="https://leetcode.com/u/varrrruuunnn" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-200">
+                  <a href="https://leetcode.com/u/vaarrrruuuunnnnn/" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-200">
                     LeetCode
                   </a>
                 </p>
