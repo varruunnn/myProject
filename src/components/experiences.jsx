@@ -1,5 +1,27 @@
 export const experiences = [
   {
+    title: "Open Source Contributor – Music Blocks",
+    company: "Sugar Labs",
+    period: "2026",
+    description: `Contributed merged pull requests focused on improving CI/CD reliability, testing infrastructure, and dependency maintenance across the Music Blocks project.
+  Optimized Docker-based CI workflows, reducing image size from ∼2.42 GB to ∼411 MB, significantly improving build efficiency and pipeline execution speed.
+  Expanded unit test coverage across multiple modules using JEST and JSDOM to improve code reliability and maintainability.
+  Resolved complex CI/testing issues involving mocked Tone.js Promises, browser-environment simulation in JSDOM, and flaky automated test execution.
+  Collaborated with maintainers to improve development workflows, debugging processes, and cross-environment compatibility.`,
+    technologies: [
+      "JavaScript",
+      "Docker",
+      "GitHub Actions",
+      "JEST",
+      "JSDOM",
+      "CI/CD",
+      "Tone.js",
+      "Open Source",
+      "Testing Infrastructure"
+    ],
+    links: []
+  },
+  {
     title: "Backend / AI Engineer",
     company: "LARC AI",
     period: "Nov-2025 – Jan-2026",
