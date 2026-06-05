@@ -1,8 +1,8 @@
 export const projects = [
   {
-    "name": "PromptForge",
+    "name": "PromptTracker",
     "description": "A full-stack AI prompt observability platform featuring a centralized API gateway, real-time telemetry tracking, and asynchronous LLM-as-a-judge evaluation.",
-    "longDescription": "PromptForge is an enterprise-grade AI observability and prompt management platform engineered to decouple LLM prompts from application source code. Built within a Turborepo monorepo, it features a high-performance Fastify API Gateway that acts as a proxy for LLM requests, logging latency and token telemetry in real-time to a Neon Serverless Postgres database. Implements an asynchronous 'LLM-as-a-judge' background polling worker that automatically evaluates AI outputs for quality without blocking the main client execution thread. Includes a Next.js App Router dashboard utilizing React Server Components and Recharts to visualize telemetry data, alongside an isolated dual-pane Prompt Playground for safe iteration. Designed to showcase modern distributed logging, background task processing, and full-stack API architecture.",
+    "longDescription": "PromptTracker is an enterprise-grade AI observability and prompt management platform engineered to decouple LLM prompts from application source code. Built within a Turborepo monorepo, it features a high-performance Fastify API Gateway that acts as a proxy for LLM requests, logging latency and token telemetry in real-time to a Neon Serverless Postgres database. Implements an asynchronous 'LLM-as-a-judge' background polling worker that automatically evaluates AI outputs for quality without blocking the main client execution thread. Includes a Next.js App Router dashboard utilizing React Server Components and Recharts to visualize telemetry data, alongside an isolated dual-pane Prompt Playground for safe iteration. Designed to showcase modern distributed logging, background task processing, and full-stack API architecture.",
     "technologies": [
       "Next.js",
       "Fastify",
@@ -11,18 +11,18 @@ export const projects = [
       "Drizzle ORM",
       "Gemini AI"
     ],
-    "img": "/promptforge.png",
+    "img": "/prompttracker.png",
     "color": "#2563eb",
     "demoLink": "https://drive.google.com/file/d/15o-i53WJ61ZImofUdiIBjSo0B2rQG8HB/view?usp=sharing",
-    "githubLink": "https://github.com/varruunnn/PromptForge",
+    "githubLink": "https://github.com/varruunnn/PromptTracker",
     "featured": true
   },
   {
-    name: "ForgeQueue",
+    name: "JobQueue",
     description:
       "A production-grade distributed job queue system built from scratch with Bun and Redis, featuring atomic Lua scripting, crash recovery, and delayed job scheduling.",
     longDescription:
-      "⚙️ ForgeQueue is a high-performance, distributed background job processing system engineered from first principles using TypeScript, Bun, and Redis.⚡ Designed for horizontal scalability, it implements the 'Reliable Queue' pattern to guarantee at-least-once delivery, ensuring zero data loss even during worker crashes.🛡️ Features a self-healing architecture with a dedicated Scheduler service that detects stalled jobs via visibility timeouts and recycles them.🔄 Manages concurrency and retries using custom atomic Lua scripts to prevent race conditions.⏳ Supports delayed job execution using Redis Sorted Sets and includes a Dead Letter Queue (DLQ) for isolating failing tasks.📉 A demonstration of distributed systems mastery, replicating the core logic of enterprise tools like BullMQ or Celery without external frameworks.",
+      "⚙️ JobQueue is a high-performance, distributed background job processing system engineered from first principles using TypeScript, Bun, and Redis.⚡ Designed for horizontal scalability, it implements the 'Reliable Queue' pattern to guarantee at-least-once delivery, ensuring zero data loss even during worker crashes.🛡️ Features a self-healing architecture with a dedicated Scheduler service that detects stalled jobs via visibility timeouts and recycles them.🔄 Manages concurrency and retries using custom atomic Lua scripts to prevent race conditions.⏳ Supports delayed job execution using Redis Sorted Sets and includes a Dead Letter Queue (DLQ) for isolating failing tasks.📉 A demonstration of distributed systems mastery, replicating the core logic of enterprise tools like BullMQ or Celery without external frameworks.",
     technologies: [
       "Bun",
       "TypeScript",
@@ -32,8 +32,8 @@ export const projects = [
     ],
     img: "/queue.png",
     color: "#dc2626",
-    demoLink: "https://github.com/varruunnn/ForgeQueue",
-    githubLink: "https://github.com/varruunnn/ForgeQueue",
+    demoLink: "https://github.com/varruunnn/JobQueue",
+    githubLink: "https://github.com/varruunnn/JobQueue",
     featured: true,
   },
   {
