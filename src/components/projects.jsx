@@ -1,5 +1,23 @@
 export const projects = [
   {
+    "name": "The Last-Minute Life Saver",
+    "description": "An event-driven AI productivity platform that generates and continuously updates personalized task schedules.",
+    "longDescription": "The Last-Minute Life Saver is an event-driven AI productivity platform that transforms large goals into structured execution plans. Built with Next.js, Redis, Bun workers, PostgreSQL, and Pusher WebSockets, it offloads AI processing to background workers for responsive APIs. A multi-step Gemini workflow analyzes task urgency and generates schema-validated milestones, while WebSockets stream real-time progress updates to the client. The system continuously monitors overdue tasks and automatically regenerates schedules in the background, showcasing asynchronous job processing, event-driven architecture, and real-time synchronization.",
+    "technologies": [
+      "Next.js",
+      "Redis",
+      "Bun",
+      "PostgreSQL",
+      "Pusher",
+      "Gemini AI"
+    ],
+    "img": "/last.png",
+    "color": "#8b5cf6",
+    "demoLink": "https://drive.google.com/file/d/1_MYW8hz1BPpgCefrwtnuSdNDFmsjyPbT/view",
+    "githubLink": "https://github.com/varruunnn/Last-Minute",
+    "featured": true
+  },
+  {
     "name": "PromptTracker",
     "description": "A full-stack AI prompt observability platform featuring a centralized API gateway, real-time telemetry tracking, and asynchronous LLM-as-a-judge evaluation.",
     "longDescription": "PromptTracker is an enterprise-grade AI observability and prompt management platform engineered to decouple LLM prompts from application source code. Built within a Turborepo monorepo, it features a high-performance Fastify API Gateway that acts as a proxy for LLM requests, logging latency and token telemetry in real-time to a Neon Serverless Postgres database. Implements an asynchronous 'LLM-as-a-judge' background polling worker that automatically evaluates AI outputs for quality without blocking the main client execution thread. Includes a Next.js App Router dashboard utilizing React Server Components and Recharts to visualize telemetry data, alongside an isolated dual-pane Prompt Playground for safe iteration. Designed to showcase modern distributed logging, background task processing, and full-stack API architecture.",
